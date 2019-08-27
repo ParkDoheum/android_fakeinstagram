@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -53,6 +54,8 @@ public class LoginActivity extends AppCompatActivity {
                         str = "아이디 없음";
                         break;
                     case 1:
+                        Intent intent = new Intent(LoginActivity.this, InstaActivity.class);
+                        startActivity(intent);
                         str = "로그인 성공";
                         break;
                     case 2:
@@ -78,5 +81,11 @@ public class LoginActivity extends AppCompatActivity {
     public void clkJoin(View v) {
         Intent intent = new Intent(LoginActivity.this, JoinActivity.class);
         startActivity(intent);
+    }
+
+    //키보드 숨기기
+    public void clkHideKeyboard(View v) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
 }
