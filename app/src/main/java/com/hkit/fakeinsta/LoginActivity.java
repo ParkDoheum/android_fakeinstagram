@@ -76,7 +76,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
     //회원가입
     public void clkJoin(View v) {
         Intent intent = new Intent(LoginActivity.this, JoinActivity.class);
