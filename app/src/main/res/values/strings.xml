@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">인스타그램</string>
+    <string name="need_uid">아이디 입력</string>
+    <string name="need_upw">비밀번호 입력</string>
+    <string name="need_upw_re">확인 비밀번호 입력</string>
+    <string name="need_nick_nm">닉네임 입력</string>
+
+    <!-- 버튼 -->
+    <string name="btn_login">로그인</string>
+    <string name="btn_join">회원가입</string>
+
+    <!-- 회원가입 activity -->
+    <string name="join_check_pw">비밀번호를 확인해주세요</string>
+</resources>
+
+
+
+
+
+
+
+
+
