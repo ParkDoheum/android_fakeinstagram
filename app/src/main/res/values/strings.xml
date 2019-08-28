@@ -11,6 +11,10 @@
 
     <!-- 회원가입 activity -->
     <string name="join_check_pw">비밀번호를 확인해주세요</string>
+
+
+    <!-- 이미지업로드 activity -->
+    <string name="imgupload_need_img">이미지를 선택해 주세요</string>
 </resources>
 
 
