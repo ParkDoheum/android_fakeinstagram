@@ -10,7 +10,6 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
-import retrofit2.http.PUT;
 import retrofit2.http.Part;
 
 public interface APIInterface {
@@ -23,7 +22,7 @@ public interface APIInterface {
 
     @Multipart
     @POST("insta/uploadImg")
-    Call<ResponseBody> uploadImg(@Part MultipartBody.Part file, @Part("description") RequestBody description);
+    Call<ResponseBody> uploadImg(@Part MultipartBody.Part file, @Part("write_uid") RequestBody write_uid);
 
     @GET("user/test")
     Call<UserVo> test();

@@ -66,8 +66,13 @@ public class ImgUploadActivity extends AppCompatActivity {
         RequestBody fileReqBody = RequestBody.Companion.create(file, MediaType.parse("image/*"));
         MultipartBody.Part part = MultipartBody.Part.createFormData("file", file.getName(), fileReqBody);
 
-        RequestBody description = RequestBody.create(MediaType.parse("text/plain"), "image-type");
-        Call call  = api.uploadImg(part, description);
+        //RequestBody uid = RequestBody.Companion.create(file, MediaType.parse("multipart/form-data"));
+
+        RequestBody write_uid =
+                RequestBody.create(
+                        okhttp3.MultipartBody.FORM, "3");
+
+        Call call  = api.uploadImg(part, write_uid);
         call.enqueue(new Callback() {
             @Override
             public void onResponse(Call call, Response response) {
